@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Employee</title>
+</head>
+<body>
+<body>
+<a th:href="@{/api/new}">Create User</a>
+<table border="1" style="width: 100%;">
+    <tr>
+        <th style="width: 5px;">ID</th>
+        <th style="width: 30px;">Name</th>
+        <th style="width: 30px;">Wage</th>
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <th th:text="${employee.id }"></th>
+        <th th:text="${employee.name}"></th>
+        <th th:text="${employee.wage}"></th>
+    </tr>
+</table>
+</body>
+
+</html>

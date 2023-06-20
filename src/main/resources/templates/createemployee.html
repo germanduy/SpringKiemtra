@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<<form th:action="@{/api/create}" th:object="${employee}" method="post">
+    <!--<input th:field="*{id}" type="hidden">-->
+    Name : <input th:field="*{name}">
+    Wage : <input th:field="*{wage}">
+    <input type="submit">
+</form>
+</body>
+</html>
